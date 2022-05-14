@@ -1,0 +1,31 @@
+.container {
+  .wrapper {
+    max-width: 1320px;
+    margin: 0 auto;
+  }
+}
+
+#header {
+  background-color: #ddd;
+}
+
+#gnb {
+  a {
+    display: block;
+  }
+  .depth1 {
+    display: flex;
+    & > li {
+      box-sizing: border-box;
+      & > a {
+        padding: 38px;
+      }
+    }
+  }
+
+  .depth2 {
+    & > li > a {
+      padding: 30px;
+    }
+  }
+}
