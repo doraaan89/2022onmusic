@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>onmusic</title>
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="wrapper">
+      <header id="header">
+        <div class="logo">
+          <img src="" alt="">
+        </div>
+        <div class="header__right">
+          <ul class="util">
+            <li class="language">
+              <a href="javascript:void(0)">( JPN )</a>
+            </li>
+            <li class="member">
+              <a href="javascript:void(0)">로그인</a>
+              <span class="divider">/</span>
+              <a href="javascript:void(0)">회원가입</a>
+            </li>
+          </ul>
+          <nav id="gnb">
+            <ul class="depth1">
+              <li v-for="(depth1, i) in gnbArr" :key="i">
+                <a :href="depth1.url">{{ depth1.title }}</a>
+                <ul class="depth2">
+                  <li v-for="(depth2, i) in depth1.depth2">
+                    <a :href="depth2.url">{{ depth2.title }}</a> 
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
