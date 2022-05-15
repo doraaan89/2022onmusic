@@ -105,5 +105,10 @@ const gnb = new Vue({
         ]
       },
     ]
+  },
+  methods: {
+    gnbHover() {
+      this.$refs.depth2[0].style.display = 'none';
+    }
   }
 })
