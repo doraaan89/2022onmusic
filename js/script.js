@@ -4,111 +4,111 @@ const gnb = new Vue({
     gnbArr: [
       {
         title: '111',
-        url: '',
+        url: 'javascript:void(0)',
         depth2: [
           {
             title: '1112',
-            url: '',
+            url: 'javascript:void(0)',
           },
           {
             title: '1112',
-            url: '',
+            url: 'javascript:void(0)',
           },
           {
             title: '1112',
-            url: '',
+            url: 'javascript:void(0)',
           },
           {
             title: '1112',
-            url: '',
+            url: 'javascript:void(0)',
           },
         ]
       },
       {
         title: '111',
-        url: '',
+        url: 'javascript:void(0)',
         depth2: [
           {
             title: '1112',
-            url: '',
+            url: 'javascript:void(0)',
           },
           {
             title: '1112',
-            url: '',
+            url: 'javascript:void(0)',
           },
           {
             title: '1112',
-            url: '',
+            url: 'javascript:void(0)',
           },
           {
             title: '1112',
-            url: '',
+            url: 'javascript:void(0)',
           },
         ]
       },
       {
         title: '111',
-        url: '',
+        url: 'javascript:void(0)',
         depth2: [
           {
             title: '1112',
-            url: '',
+            url: 'javascript:void(0)',
           },
           {
             title: '1112',
-            url: '',
+            url: 'javascript:void(0)',
           },
           {
             title: '1112',
-            url: '',
+            url: 'javascript:void(0)',
           },
           {
             title: '1112',
-            url: '',
+            url: 'javascript:void(0)',
           },
         ]
       },
       {
         title: '111',
-        url: '',
+        url: 'javascript:void(0)',
         depth2: [
           {
             title: '1112',
-            url: '',
+            url: 'javascript:void(0)',
           },
           {
             title: '1112',
-            url: '',
+            url: 'javascript:void(0)',
           },
           {
             title: '1112',
-            url: '',
+            url: 'javascript:void(0)',
           },
           {
             title: '1112',
-            url: '',
+            url: 'javascript:void(0)',
           },
         ]
       },
       {
         title: '111',
-        url: '',
+        url: 'javascript:void(0)',
         depth2: [
           {
             title: '1112',
-            url: '',
+            url: 'javascript:void(0)',
           },
           {
             title: '1112',
-            url: '',
+            url: 'javascript:void(0)',
           },
           {
             title: '1112',
-            url: '',
+            url: 'javascript:void(0)',
           },
           {
             title: '1112',
-            url: '',
+            url: 'javascript:void(0)',
           },
         ]
       },
