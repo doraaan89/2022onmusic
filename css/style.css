@@ -1,14 +1,71 @@
+/* common */
+img {
+  width: 100%;
+}
+
 .container .wrapper {
   max-width: 1320px;
   margin: 0 auto;
 }
 
 #header {
-  background-color: #ddd;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 125px;
 }
 
-#gnb a {
+#header a {
   display: block;
+  text-decoration: none;
+  color: #111;
+}
+
+#header .logo {
+  width: 120px;
+  padding: 0 22px;
+}
+
+#header .header__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  font-size: 22px;
+  color: #606060;
+}
+
+#header .header__right .language {
+  text-align: right;
+}
+
+#header .header__right .language a {
+  display: inline;
+}
+
+#header .header__right .member {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 16px;
+}
+
+#header .header__right .member .divider {
+  margin: 0 4px;
+}
+
+#gnb {
+  margin-top: 16px;
+  border-top: 1px solid #090103;
 }
 
 #gnb .depth1 {
@@ -18,14 +75,15 @@
 }
 
 #gnb .depth1 > li {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  margin-right: 100px;
 }
 
 #gnb .depth1 > li > a {
-  padding: 38px;
+  padding: 38px 0;
+  font-size: 30px;
+  font-weight: 700;
 }
 
 #gnb .depth2 > li > a {
-  padding: 30px;
+  padding: 26px 0 0 0;
 }

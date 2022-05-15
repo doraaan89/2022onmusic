@@ -1,3 +1,14 @@
+/* common */
+img {
+  width: 100%;
+}
+
+@mixin block-a {
+  display: block;
+  text-decoration: none;
+  color: #111;
+}
+
 .container {
   .wrapper {
     max-width: 1320px;
@@ -6,26 +17,57 @@
 }
 
 #header {
-  background-color: #ddd;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 125px;
+  a {
+    @include block-a
+  }
+  .logo {
+    width: 120px;
+    padding: 0 22px;
+  }
+  
+  .header__right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 22px;
+    color: #606060;
+    .language {
+      text-align: right;
+      a {
+        display: inline;
+      }
+    }
+    .member {
+      display: flex;
+      margin-top: 16px;
+      .divider {
+        margin: 0 4px;
+      }
+    }
+  }
 }
 
 #gnb {
-  a {
-    display: block;
-  }
+  margin-top: 16px;
+  border-top: 1px solid #090103;
   .depth1 {
     display: flex;
     & > li {
-      box-sizing: border-box;
+      margin-right: 100px;
       & > a {
-        padding: 38px;
+        padding: 38px 0;
+        font-size: 30px;
+        font-weight: 700;
       }
     }
   }
 
   .depth2 {
     & > li > a {
-      padding: 30px;
+      padding: 26px 0 0 0;
     }
   }
 }
