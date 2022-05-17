@@ -52,12 +52,14 @@ img {
 }
 
 #gnb {
+  width: 1100px;
   margin-top: 16px;
   border-top: 1px solid #090103;
   .depth1 {
     display: flex;
+    width: 100%;
     & > li {
-      margin-right: 100px;
+      flex: 1 0 20%;
       & > a {
         padding: 38px 0;
         font-size: 30px;
