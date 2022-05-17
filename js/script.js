@@ -104,11 +104,16 @@ const gnb = new Vue({
           },
         ]
       },
-    ]
+    ],
+    showDepth2: false,
   },
   methods: {
     gnbHover() {
-      this.$refs.depth2[0].style.display = 'none';
+      if(event.type === 'mouseover') {
+        this.showDepth2 = true;
+      } else {
+        this.showDepth2 = false;
+      }
     }
   }
 })

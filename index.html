@@ -32,9 +32,9 @@
           </ul>
           <nav id="gnb">
             <ul class="depth1">
-              <li v-for="(depth1, i) in gnbArr" :key="i" @mouseover="gnbHover">
+              <li v-for="(depth1, i) in gnbArr" :key="i" @mouseover="gnbHover" @mouseout="gnbHover">
                 <a :href="depth1.url">{{ depth1.title }}</a>
-                <ul class="depth2" ref="depth2">
+                <ul v-show="showDepth2" class="depth2">
                   <li v-for="(depth2, i) in depth1.depth2" ref="depth2">
                     <a :href="depth2.url">{{ depth2.title }}</a> 
                   </li>
