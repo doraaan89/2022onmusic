@@ -105,3 +105,65 @@ img {
   padding: 26px 0 0 0;
   color: #fff;
 }
+
+#footer .footer__upper {
+  padding-bottom: 16px;
+  border-bottom: 2px solid #090103;
+}
+
+#footer .footer__upper .sns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#footer .footer__upper .sns .sns__item:not(:first-child) {
+  margin-left: 30px;
+}
+
+#footer .footer__upper .sns .sns__item > a {
+  display: block;
+  text-decoration: none;
+  color: #111;
+  font-size: 24px;
+}
+
+#footer .footer__lower {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 52px;
+}
+
+#footer .footer__lower .logo {
+  width: 315px;
+}
+
+#footer .footer__lower .operating-time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#footer .footer__lower .operating-time .title {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+}
+
+#footer .footer__lower .operating-time .time {
+  margin-left: 30px;
+}
+
+#footer .footer__lower .operating-time .time li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#footer .footer__lower .operating-time .time li:last-child {
+  margin-top: 8px;
+}

@@ -86,3 +86,47 @@ img {
     }
   }
 }
+
+#footer {
+  .footer__upper {
+    padding-bottom: 16px;
+    border-bottom: 2px solid #090103;
+    .sns {
+      display: flex;
+      .sns__item:not(:first-child) {
+        margin-left: 30px;
+      }
+      .sns__item > a {
+        @include block-a;
+        font-size: 24px;
+      }
+    }
+  }
+
+  .footer__lower {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 52px;
+    .logo {
+      width: 315px;
+    }
+
+    .operating-time {
+      display: flex;
+      .title {
+        font-size: 22px;
+        font-weight: 700;
+        letter-spacing: 1.1px;
+      }
+      .time {
+        margin-left: 30px;
+        li {
+          display: flex;
+          &:last-child {
+            margin-top: 8px;
+          }
+        }
+      }
+    }
+  }
+}
