@@ -94,6 +94,7 @@ img {
   .depth2 {
     position: absolute;
     width: calc(100% / 5);
+    font-family: 'Noto Sans KR';
     & > li > a {
       @include block-a;
       width: 100%;

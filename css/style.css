@@ -164,6 +164,7 @@ img {
 #gnb .depth2 {
   position: absolute;
   width: calc(100% / 5);
+  font-family: 'Noto Sans KR';
 }
 
 #gnb .depth2 > li > a {
