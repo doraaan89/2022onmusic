@@ -2,6 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans+KR:wght@400;700&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -50,16 +51,6 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-}
-
-@font-face {
-  font-family: 'Noto Sans KR';
-  src: url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap");
-}
-
-@font-face {
-  font-family: 'Montserrat';
-  src: url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap");
 }
 
 /* common */
@@ -145,6 +136,7 @@ img {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+  font-family: 'Montserrat';
 }
 
 #gnb .depth1 > li {

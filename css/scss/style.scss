@@ -1,5 +1,6 @@
 @import 'reset.scss';
 @import 'font.scss';
+
 // variation
 $fc-black: #111;
 
@@ -70,6 +71,7 @@ img {
     position: relative;
     display: flex;
     width: 100%;
+    font-family: 'Montserrat';
     & > li {
       flex: 1 0 20%;
       & > a {
