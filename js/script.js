@@ -117,3 +117,42 @@ const gnb = new Vue({
     }
   }
 })
+
+const floatingArea = new Vue({
+  el: '.floating-area',
+  data: {
+    expendBtn: {
+      href: 'javascript:void(0)',
+      imgSrc: 'img/common/btn_menu.png',
+      imgAlt: '메뉴버튼',
+    },
+    isMenuShow: false,
+    menuArr: [
+      {
+        href: 'javascript:void(0)',
+        imgSrc: 'img/common/btn_consulting.png',
+        imgAlt: '상담신청',
+      },
+      {
+        href: 'javascript:void(0)',
+        imgSrc: 'img/common/btn_kakao.png',
+        imgAlt: '카카오톡',
+      },
+      {
+        href: 'javascript:void(0)',
+        imgSrc: 'img/common/btn_plus.png',
+        imgAlt: 'contact 페이지',
+      },
+    ],
+    topBtn: {
+      href: 'javascript:void(0)',
+      imgSrc: 'img/common/btn_more.png',
+      imgAlt: '페이지 맨위로 이동'
+    }
+  },
+  methods: {
+    menuBtn() {
+      this.isMenuShow = !this.isMenuShow;
+    }
+  }
+})

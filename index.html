@@ -44,7 +44,59 @@
             </nav>
           </div>
         </header>
-        <main class="main-content">메인 컨텐츠 영역</main>
+        <main class="main-content">
+          <section class="banner-area">
+            <img src="img/common/main-banner.jpg" alt="">
+          </section>
+          <section class="accordion-area">
+            <h4 class="title">
+              <p class="title--img">
+                <img src="img/common/accordion-title-img.png" alt="">
+              </p>
+              <p class="title--content">
+                WE MAKE YOUR DREAM ON MUSIC
+              </p>
+            </h4>
+            <article class="contents">
+              <details>
+                <summary>INTRO</summary>
+                <div class="content">
+                  content 영역
+                </div>
+              </details>
+              <details>
+                <summary>ON AIR</summary>
+                <div class="content">
+                  content 영역
+                </div>
+              </details>
+              <details>
+                <summary>ONMUSIC ACADEMY</summary>
+                <div class="content">
+                  content 영역
+                </div>
+              </details>
+              <details open>
+                <summary>ONMUSIC AUDITION</summary>
+                <div class="content">
+                  <div class="img-star">
+                    <a href="javascript:void(0)">
+                      <img src="img/common/onmusic-star-1.jpg" alt="">
+                    </a>
+                  </div>
+                  <div class="img-area">
+                    <a href="javascript:void(0)">
+                      <img src="img/common/img-area-1.jpg" alt="">
+                    </a>
+                    <a href="javascript:void(0)">
+                      <img src="img/common/img-area-2.png" alt="">
+                    </a>
+                  </div>
+                </div>
+              </details>
+            </article>
+          </section>
+        </main>
         <footer id="footer">
           <div class="footer__upper">
             <ul class="sns">
@@ -78,6 +130,30 @@
             </div>
           </div>
         </footer>
+
+        <!-- floating banner area [S] -->
+        <div class="floating-area">
+          <ul class="menu">
+            <li class="expand-btn">
+              <a :href="expendBtn.href" @click.prevent="menuBtn">
+                <img :src="expendBtn.imgSrc" :alt="expendBtn.imgAlt">
+              </a>
+              <transition>
+                <ul v-if="isMenuShow" class="expand-menu">
+                  <li v-for="(list, i) in menuArr" :key="i">
+                    <a :href="list.href">
+                      <img :src="list.imgSrc" :alt="list.imgAlt">
+                    </a>
+                  </li>
+                </ul>
+              </transition>
+            </li>
+          </ul>
+          <a :href="topBtn.href" class="top-btn">
+            <img :src="topBtn.imgSrc" :alt="topBtn.imgAlt">
+          </a>
+        </div>
+        <!-- floating banner area [E] -->
       </div>
     </div>
 
