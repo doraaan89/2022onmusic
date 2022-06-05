@@ -1,7 +1,14 @@
+@import 'reset.scss';
+@import 'font.scss';
+
 // variation
 $fc-black: #111;
 
 /* common */
+body {
+  font-family: 'Noto Sans KR';
+}
+
 img {
   width: 100%;
 }
@@ -39,6 +46,7 @@ img {
     font-size: 22px;
     color: #606060;
     .language {
+      font-family: 'Montserrat';
       text-align: right;
       a {
         display: inline;
@@ -58,9 +66,12 @@ img {
   width: 1100px;
   margin-top: 16px;
   border-top: 1px solid #090103;
+  
   .depth1 {
+    position: relative;
     display: flex;
     width: 100%;
+    font-family: 'Montserrat';
     & > li {
       flex: 1 0 20%;
       & > a {
@@ -68,26 +79,35 @@ img {
         font-size: 30px;
         font-weight: 700;
       }
-      &:first-child .depth2::after {
-        content: '';
-        position: absolute;
-        bottom: -38px;
-        left: 0;
-        z-index: -1;
-        width: 100%;
-        height: 288px;
-        background-color: #000;
-        opacity: 0.75;
-      }
+    }
+    .depth2-bg {
+      position: absolute;
+      top: 106px;
+      right: 0;
+      z-index: 0;
+      width: 1320px;
+      height: 288px;
+      background-color: rgba(0, 0, 0,.5);
     }
   }
 
   .depth2 {
+    position: absolute;
+    width: calc(100% / 5);
+    font-family: 'Noto Sans KR';
     & > li > a {
+      @include block-a;
+      width: 100%;
       padding: 26px 0 0 0;
       color: #fff;
     }
   }
+}
+
+.main-content {
+  width: 100%;
+  height: 900px;
+  background-color: #ddd;
 }
 
 #footer {
@@ -96,6 +116,7 @@ img {
     border-bottom: 2px solid #090103;
     .sns {
       display: flex;
+      font-family: 'Montserrat';
       .sns__item:not(:first-child) {
         margin-left: 30px;
       }
@@ -133,3 +154,5 @@ img {
     }
   }
 }
+
+// 220523 vscode.dev 확인
