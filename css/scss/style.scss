@@ -241,3 +241,14 @@ img {
     margin-top: 20px;
   }
 }
+
+// transition
+.gnb-enter-active,
+.gnb-leave-active {
+  transition: all .3s;
+}
+
+.gnb-enter,
+.gnb-leave-to {
+  opacity: 0;
+}

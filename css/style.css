@@ -335,3 +335,14 @@ img {
 .floating-area .top-btn {
   margin-top: 20px;
 }
+
+.gnb-enter-active,
+.gnb-leave-active {
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.gnb-enter,
+.gnb-leave-to {
+  opacity: 0;
+}

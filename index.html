@@ -31,14 +31,18 @@
             </ul>
             <nav id="gnb">
               <ul class="depth1">
-                <div v-show="showDepth2" class="depth2-bg"></div>
+                <transition name="gnb">
+                  <div v-show="showDepth2" class="depth2-bg"></div>
+                </transition>
                 <li v-for="(depth1, i) in gnbArr" :key="i" @mouseover="gnbHover" @mouseout="gnbHover">
                   <a :href="depth1.url">{{ depth1.title }}</a>
-                  <ul v-show="showDepth2" class="depth2">
-                    <li v-for="(depth2, i) in depth1.depth2" ref="depth2">
-                      <a :href="depth2.url">{{ depth2.title }}</a>
-                    </li>
-                  </ul>
+                  <transition name="gnb">
+                    <ul v-show="showDepth2" class="depth2">
+                      <li v-for="(depth2, i) in depth1.depth2" ref="depth2">
+                        <a :href="depth2.url">{{ depth2.title }}</a>
+                      </li>
+                    </ul>
+                  </transition>
                 </li>
               </ul>
             </nav>
@@ -46,50 +50,44 @@
         </header>
         <main class="main-content">
           <section class="banner-area">
-            <img src="img/common/main-banner.jpg" alt="">
+            <img src="img/common/main-banner.jpg" alt="" />
           </section>
           <section class="accordion-area">
             <h4 class="title">
               <p class="title--img">
-                <img src="img/common/accordion-title-img.png" alt="">
+                <img src="img/common/accordion-title-img.png" alt="" />
               </p>
-              <p class="title--content">
-                WE MAKE YOUR DREAM ON MUSIC
-              </p>
+              <p class="title--content">WE MAKE YOUR DREAM ON MUSIC</p>
             </h4>
             <article class="contents">
               <details>
                 <summary>INTRO</summary>
                 <div class="content">
-                  content 영역
+                  
                 </div>
               </details>
               <details>
                 <summary>ON AIR</summary>
-                <div class="content">
-                  content 영역
-                </div>
+                <div class="content">content 영역</div>
               </details>
               <details>
                 <summary>ONMUSIC ACADEMY</summary>
-                <div class="content">
-                  content 영역
-                </div>
+                <div class="content">content 영역</div>
               </details>
               <details open>
                 <summary>ONMUSIC AUDITION</summary>
                 <div class="content">
                   <div class="img-star">
                     <a href="javascript:void(0)">
-                      <img src="img/common/onmusic-star-1.jpg" alt="">
+                      <img src="img/common/onmusic-star-1.jpg" alt="" />
                     </a>
                   </div>
                   <div class="img-area">
                     <a href="javascript:void(0)">
-                      <img src="img/common/img-area-1.jpg" alt="">
+                      <img src="img/common/img-area-1.jpg" alt="" />
                     </a>
                     <a href="javascript:void(0)">
-                      <img src="img/common/img-area-2.png" alt="">
+                      <img src="img/common/img-area-2.png" alt="" />
                     </a>
                   </div>
                 </div>
@@ -136,13 +134,13 @@
           <ul class="menu">
             <li class="expand-btn">
               <a :href="expendBtn.href" @click.prevent="menuBtn">
-                <img :src="expendBtn.imgSrc" :alt="expendBtn.imgAlt">
+                <img :src="expendBtn.imgSrc" :alt="expendBtn.imgAlt" />
               </a>
               <transition>
                 <ul v-if="isMenuShow" class="expand-menu">
                   <li v-for="(list, i) in menuArr" :key="i">
                     <a :href="list.href">
-                      <img :src="list.imgSrc" :alt="list.imgAlt">
+                      <img :src="list.imgSrc" :alt="list.imgAlt" />
                     </a>
                   </li>
                 </ul>
@@ -150,7 +148,7 @@
             </li>
           </ul>
           <a :href="topBtn.href" class="top-btn">
-            <img :src="topBtn.imgSrc" :alt="topBtn.imgAlt">
+            <img :src="topBtn.imgSrc" :alt="topBtn.imgAlt" />
           </a>
         </div>
         <!-- floating banner area [E] -->
