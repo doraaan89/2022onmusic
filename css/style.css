@@ -67,6 +67,23 @@ img {
   margin: 0 auto;
 }
 
+button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 0;
+  outline: 0;
+  background-color: #fff;
+  font-family: 'Montserrat';
+}
+
+button.btn {
+  padding: 14px 20px;
+  border-radius: 20px;
+  background-color: #111;
+  color: #fff;
+}
+
 #header {
   position: relative;
   display: -webkit-box;
@@ -210,10 +227,11 @@ img {
 }
 
 .main-content .accordion-area .contents details summary::-webkit-details-marker {
-  font-size: 40px;
+  font-size: 0;
+  display: none;
 }
 
-.main-content .accordion-area .contents details summary::after {
+.main-content .accordion-area .contents details[open] summary::after {
   content: '';
   position: absolute;
   top: 0;
@@ -223,8 +241,41 @@ img {
   background-color: #c5ff00;
 }
 
+.main-content .accordion-area .contents details.intro .content .intro-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 28px;
+  padding-bottom: 75px;
+}
+
+.main-content .accordion-area .contents details.intro .content .intro-area img {
+  width: 200px;
+  margin-left: 271px;
+}
+
+.main-content .accordion-area .contents details.intro .content .intro-area .text-area {
+  margin-left: 313px;
+}
+
+.main-content .accordion-area .contents details.intro .content .intro-area .text-area .title {
+  font-family: 'Montserrat';
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+}
+
+.main-content .accordion-area .contents details.intro .content .intro-area .text-area .summary {
+  margin-top: 38px;
+}
+
 .main-content .accordion-area .contents details .content {
   padding: 24px 0;
+}
+
+.main-content .accordion-area .contents details .content .btn-wrap {
+  padding: 0 22px;
+  text-align: right;
 }
 
 .main-content .accordion-area .contents details .content.empty {
@@ -246,6 +297,114 @@ img {
 
 .main-content .accordion-area .contents details .content .img-area a + a {
   margin-left: 24px;
+}
+
+.trainer-content {
+  margin-top: 60px;
+}
+
+.trainer-content .title {
+  font-family: 'Montserrat';
+  font-size: 42px;
+  line-height: 1.43;
+}
+
+.trainer-content .title img {
+  width: 40px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+.trainer-content .trainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 80px;
+}
+
+.trainer-content .trainer h5.title {
+  width: 200px;
+  border-top: 13px solid #111;
+  padding-top: 40px;
+  font-family: 'Montserrat';
+  font-size: 52px;
+  font-weight: 700;
+}
+
+.trainer-content .trainer .member-container {
+  margin-left: 136px;
+}
+
+.trainer-content .trainer .ceo {
+  margin-bottom: 95px;
+}
+
+.trainer-content .trainer .ceo img {
+  width: 312px;
+  height: 416px;
+}
+
+.trainer-content .trainer .ceo > a {
+  display: block;
+  text-decoration: none;
+  color: #111;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.trainer-content .trainer .ceo .text .position {
+  font-family: 'Montserrat';
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.trainer-content .trainer .ceo .text .position em {
+  font-family: 'Noto Sans KR';
+  font-size: 38px;
+}
+
+.trainer-content .trainer .ceo .text .name {
+  margin-top: 36px;
+  font-size: 36px;
+  text-align: left;
+}
+
+.trainer-content .trainer .member-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.trainer-content .trainer .member-wrap .member {
+  width: 312px;
+  padding-bottom: 25px;
+}
+
+.trainer-content .trainer .member-wrap .member:not(:nth-child(3n+1)) {
+  margin-left: 24px;
+}
+
+.trainer-content .trainer .member-wrap .member a {
+  display: block;
+  text-decoration: none;
+  color: #111;
+}
+
+.trainer-content .trainer .member-wrap .member a img {
+  width: 312px;
+  height: 416px;
+}
+
+.trainer-content .trainer .member-wrap .member a .name {
+  margin-top: 15px;
+  font-size: 34px;
+  text-align: center;
 }
 
 #footer {
@@ -326,6 +485,12 @@ img {
   text-decoration: none;
   color: #111;
   width: 83px;
+  border-radius: 100%;
+}
+
+.floating-area a img {
+  border-radius: 99%;
+  background-color: #fff;
 }
 
 .floating-area .expand-menu li {
@@ -344,5 +509,16 @@ img {
 
 .gnb-enter,
 .gnb-leave-to {
+  opacity: 0;
+}
+
+.floating-enter-active,
+.floating-leave-active {
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+}
+
+.floating-enter,
+.floating-leave-to {
   opacity: 0;
 }

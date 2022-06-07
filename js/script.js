@@ -22,27 +22,27 @@ const gnb = new Vue({
       },
       {
         title: 'TRAINER',
-        url: 'javascript:void(0)',
+        url: 'trainer.html',
         depth2: [
           {
             title: '보컬',
-            url: 'javascript:void(0)',
+            url: '#vocal',
           },
           {
             title: '댄스',
-            url: 'javascript:void(0)',
+            url: '#dance',
           },
           {
             title: '미디 / 작곡',
-            url: 'javascript:void(0)',
+            url: '#midi',
           },
           {
             title: '랩',
-            url: 'javascript:void(0)',
+            url: '#rap',
           },
           {
             title: '피아노 / 기타',
-            url: 'javascript:void(0)',
+            url: '#piano',
           },
         ]
       },
@@ -146,13 +146,17 @@ const floatingArea = new Vue({
     ],
     topBtn: {
       href: 'javascript:void(0)',
-      imgSrc: 'img/common/btn_more.png',
+      imgSrc: 'img/common/btn_top.png',
       imgAlt: '페이지 맨위로 이동'
     }
   },
   methods: {
     menuBtn() {
       this.isMenuShow = !this.isMenuShow;
+    },
+    scrollTop() {
+      // document.documentElement.scrollTop = 0;
+      window.scrollTo({top: 0, behavior: 'smooth'})
     }
   }
 })
