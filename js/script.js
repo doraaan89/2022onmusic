@@ -161,4 +161,22 @@ const floatingArea = new Vue({
   }
 });
 
-// git 구름 test
+const trainer = new Vue({
+	el: '.trainer-content',
+	data() {
+		return {
+			trainerArr: [
+				{
+					id: 'vocal',
+					ceo: true;
+					trainer: [
+						{
+							name: 'ttt',
+							profileImg: '',
+						}
+					]
+				},
+			],
+		}
+	}
+});
