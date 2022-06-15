@@ -159,4 +159,6 @@ const floatingArea = new Vue({
       window.scrollTo({top: 0, behavior: 'smooth'})
     }
   }
-})
+});
+
+// git 구름 test
