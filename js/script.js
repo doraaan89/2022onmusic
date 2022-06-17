@@ -168,7 +168,7 @@ const trainer = new Vue({
 			trainerArr: [
 				{
 					id: 'vocal',
-					ceo: true;
+					ceo: true,
 					trainer: [
 						{
 							name: 'ttt',
