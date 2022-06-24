@@ -159,4 +159,24 @@ const floatingArea = new Vue({
       window.scrollTo({top: 0, behavior: 'smooth'})
     }
   }
-})
+});
+
+const trainer = new Vue({
+	el: '.trainer-content',
+	data() {
+		return {
+			trainerArr: [
+				{
+					id: 'vocal',
+					ceo: true,
+					trainer: [
+						{
+							name: 'ttt',
+							profileImg: '',
+						}
+					]
+				},
+			],
+		}
+	}
+});
