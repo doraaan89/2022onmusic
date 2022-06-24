@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>about</title>
+
+    <link rel="stylesheet" href="css/style.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <header id="header">
+          <div class="logo">
+            <a href="index.html">
+              <img src="img/onmusic_black.png" alt="" />
+            </a>
+          </div>
+          <div class="header__right">
+            <ul class="util">
+              <li class="language">
+                <a href="javascript:void(0)">( JPN )</a>
+              </li>
+              <li class="member">
+                <a href="javascript:void(0)">로그인</a>
+                <span class="divider">/</span>
+                <a href="javascript:void(0)">회원가입</a>
+              </li>
+            </ul>
+            <nav id="gnb">
+              <ul class="depth1">
+                <transition name="gnb">
+                  <div v-show="showDepth2" class="depth2-bg"></div>
+                </transition>
+                <li v-for="(depth1, i) in gnbArr" :key="i" @mouseover="gnbHover" @mouseout="gnbHover">
+                  <a :href="depth1.url">{{ depth1.title }}</a>
+                  <transition name="gnb">
+                    <ul v-show="showDepth2" class="depth2">
+                      <li v-for="(depth2, i) in depth1.depth2" ref="depth2">
+                        <a :href="depth2.url">{{ depth2.title }}</a>
+                      </li>
+                    </ul>
+                  </transition>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </header>
+        <main class="about-content">
+          <section class="about-us">
+            <h4 class="title">
+              <img src="img/common/accordion-title-img.png" alt="">
+              ABOUT US
+            </h4>
+            <div class="contents">
+              <h5 class="title">
+                WE MAKE YOUR<br />DREAM ON MUSIC
+              </h5>
+              <p class="content">
+                안녕하세요 !<br />
+                온뮤직 아카데미 대표이사 겸 강북캠퍼스 원장 양창훈입니다.<br />
+                <br />
+                온뮤직 아카데미는 역동적이고 도전적이면서 트렌디함을 갖춘 아카데미를 지향하고 있습니다.<br />
+                2015년 설립 이후 국내에서 최단기간 최다 합격자 배출을 성공하였고 매년 국내 유명 실용 음악 대학, 실용무용과, K-POP합격자를 배출하고 있습니다.<br />
+                <br />
+                온뮤직만의 측별함은 개개인에 맞춰 개인의 역량을 끌어내는 특별함에 있습니다.<br />
+                아이돌이 아이돌지망생을 가르치며 최고의 경험과 전략으로 심플하지만 누구도 따라올 수 없는 경쟁력을 보여드리기 위해
+                최선을 다하는 모습으로 함께 할 것입니다. 앞으로 미래로 나아가는 온뮤직이 되고자 합니다.<br />
+                <br />
+                음악을 사랑하는 모든 사람들의 든든한 동반자로 함께하고 싶습니다.<br />
+                여러분의 꿈을 응원하는 온뮤직은 언제나 여러분들에게 열려있습니다. 감사합니다.
+              </p>
+              <img src="temp/about/1x/about1.png" alt="">
+            </div>
+          </section>
+          <section class="strategy">
+            <div class="bg"></div>
+            <h4 class="title">
+              STRATEGY
+            </h4>
+            <img src="temp/about/1x/about2.png" alt="">
+          </section>
+        </main>
+        <footer id="footer">
+          <div class="footer__upper">
+            <ul class="sns">
+              <li class="sns__item">
+                <a href="javascript:void(0)">( INSTAGRAM )</a>
+              </li>
+              <li class="sns__item">
+                <a href="javascript:void(0)">( FACEBOOK )</a>
+              </li>
+              <li class="sns__item">
+                <a href="javascript:void(0)">( YOUTUBE )</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__lower">
+            <div class="logo">
+              <img src="img/logo_footer.png" alt="logo img" />
+            </div>
+            <div class="operating-time">
+              <h4 class="title">운영시간</h4>
+              <ul class="time">
+                <li>
+                  <span class="time__title">평&nbsp;&nbsp;일</span>
+                  <span class="time__content">PM 1:00 - PM 10:00</span>
+                </li>
+                <li>
+                  <span class="time__title">토요일</span>
+                  <span class="time__content">PM 1:00 - PM 7:00</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </footer>
+
+        <!-- floating banner area [S] -->
+        <div class="floating-area">
+          <ul class="menu">
+            <li class="expand-btn">
+              <a :href="expendBtn.href" @click.prevent="menuBtn">
+                <img :src="expendBtn.imgSrc" :alt="expendBtn.imgAlt" />
+              </a>
+              <transition>
+                <ul v-if="isMenuShow" class="expand-menu">
+                  <li v-for="(list, i) in menuArr" :key="i">
+                    <a :href="list.href">
+                      <img :src="list.imgSrc" :alt="list.imgAlt" />
+                    </a>
+                  </li>
+                </ul>
+              </transition>
+            </li>
+          </ul>
+          <a :href="topBtn.href" class="top-btn" @click.prevent="scrollTop">
+            <img :src="topBtn.imgSrc" :alt="topBtn.imgAlt" />
+          </a>
+        </div>
+        <!-- floating banner area [E] -->
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

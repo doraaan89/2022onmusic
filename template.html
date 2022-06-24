@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>about</title>
+
+    <link rel="stylesheet" href="css/style.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <header id="header">
+          <div class="logo">
+            <a href="index.html">
+              <img src="img/onmusic_black.png" alt="" />
+            </a>
+          </div>
+          <div class="header__right">
+            <ul class="util">
+              <li class="language">
+                <a href="javascript:void(0)">( JPN )</a>
+              </li>
+              <li class="member">
+                <a href="javascript:void(0)">로그인</a>
+                <span class="divider">/</span>
+                <a href="javascript:void(0)">회원가입</a>
+              </li>
+            </ul>
+            <nav id="gnb">
+              <ul class="depth1">
+                <transition name="gnb">
+                  <div v-show="showDepth2" class="depth2-bg"></div>
+                </transition>
+                <li v-for="(depth1, i) in gnbArr" :key="i" @mouseover="gnbHover" @mouseout="gnbHover">
+                  <a :href="depth1.url">{{ depth1.title }}</a>
+                  <transition name="gnb">
+                    <ul v-show="showDepth2" class="depth2">
+                      <li v-for="(depth2, i) in depth1.depth2" ref="depth2">
+                        <a :href="depth2.url">{{ depth2.title }}</a>
+                      </li>
+                    </ul>
+                  </transition>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </header>
+        <main class="about-content">
+         
+        </main>
+        <footer id="footer">
+          <div class="footer__upper">
+            <ul class="sns">
+              <li class="sns__item">
+                <a href="javascript:void(0)">( INSTAGRAM )</a>
+              </li>
+              <li class="sns__item">
+                <a href="javascript:void(0)">( FACEBOOK )</a>
+              </li>
+              <li class="sns__item">
+                <a href="javascript:void(0)">( YOUTUBE )</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__lower">
+            <div class="logo">
+              <img src="img/logo_footer.png" alt="logo img" />
+            </div>
+            <div class="operating-time">
+              <h4 class="title">운영시간</h4>
+              <ul class="time">
+                <li>
+                  <span class="time__title">평&nbsp;&nbsp;일</span>
+                  <span class="time__content">PM 1:00 - PM 10:00</span>
+                </li>
+                <li>
+                  <span class="time__title">토요일</span>
+                  <span class="time__content">PM 1:00 - PM 7:00</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </footer>
+
+        <!-- floating banner area [S] -->
+        <div class="floating-area">
+          <ul class="menu">
+            <li class="expand-btn">
+              <a :href="expendBtn.href" @click.prevent="menuBtn">
+                <img :src="expendBtn.imgSrc" :alt="expendBtn.imgAlt" />
+              </a>
+              <transition>
+                <ul v-if="isMenuShow" class="expand-menu">
+                  <li v-for="(list, i) in menuArr" :key="i">
+                    <a :href="list.href">
+                      <img :src="list.imgSrc" :alt="list.imgAlt" />
+                    </a>
+                  </li>
+                </ul>
+              </transition>
+            </li>
+          </ul>
+          <a :href="topBtn.href" class="top-btn" @click.prevent="scrollTop">
+            <img :src="topBtn.imgSrc" :alt="topBtn.imgAlt" />
+          </a>
+        </div>
+        <!-- floating banner area [E] -->
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

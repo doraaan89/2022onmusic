@@ -4,7 +4,7 @@ const gnb = new Vue({
     gnbArr: [
       {
         title: 'ABOUT',
-        url: 'javascript:void(0)',
+        url: 'about.html',
         depth2: [
           {
             title: '온뮤직 소개',
@@ -88,7 +88,7 @@ const gnb = new Vue({
       },
       {
         title: 'CONTACT',
-        url: 'javascript:void(0)',
+        url: 'contact.html',
         depth2: [
           {
             title: '컨택트',
