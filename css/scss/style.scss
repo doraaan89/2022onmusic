@@ -26,6 +26,22 @@ img {
   }
 }
 
+button {
+  appearance: none;
+  border: 0;
+  outline: 0;
+  background-color: #fff;
+  font-family: 'Montserrat';
+  &.btn {
+    padding: 14px 20px;
+    border-radius: 20px;
+    background-color: #111;
+    color: #fff; 
+  } 
+}
+
+// header
+
 #header {
   position: relative;
   display: flex;
@@ -138,21 +154,56 @@ img {
           font-size: 33px;
           color: #111;
           &::-webkit-details-marker {
-            font-size: 40px;
-          }
-          &::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 23px;
-            height: 100%;
-            background-color: #c5ff00;
+            font-size: 0;
+            display: none;
           }
         }
-
+        &[open] {
+          summary {
+            &::after {
+              content: '';
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 23px;
+              height: 100%;
+              background-color: #c5ff00;
+            }
+          }
+        }
+        &.intro {
+          .content {
+            .intro-area {
+              display: flex;
+              margin-top: 28px;
+              padding-bottom: 75px;
+              img {
+                width: 200px;
+                margin-left: 271px;
+              }
+              .text-area {
+                margin-left: 313px;
+                .title {
+                  font-family: 'Montserrat';
+                  font-size: 28px;
+                  font-weight: 700;
+                  letter-spacing: 0.7px;
+                }
+                .summary {
+                  margin-top: 38px;
+                }
+              }
+            }
+            
+          }
+        }
         .content {
           padding: 24px 0;
+
+          .btn-wrap {
+            padding: 0 22px;
+            text-align: right;
+          }
           &.empty {
             height: 300px;
             background-color: #ddd;
@@ -168,6 +219,90 @@ img {
                 margin-left: 24px;
               }
             }
+          }
+        }
+      }
+    }
+  }
+}
+
+.trainer-content {
+  margin-top: 60px;
+  .title {
+    font-family: 'Montserrat';
+    font-size: 42px;
+    line-height: 1.43;
+    img {
+      width: 40px;
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+  }
+
+  .trainer {
+    display: flex;
+    margin-top: 80px;
+    h5.title {
+      width: 200px;
+      border-top: 13px solid #111;
+      padding-top: 40px;
+      font-family: 'Montserrat';
+      font-size: 52px;
+      font-weight: 700;
+    }
+    .member-container {
+      margin-left: 136px;
+    }
+    .ceo {
+      
+      margin-bottom: 95px;
+      img {
+        width: 312px;
+        height: 416px;
+      }
+    }
+    .ceo > a {
+      @include block-a;
+      display: flex;
+      align-items: flex-end;
+    }
+    .ceo .text {
+      .position {
+        font-family: 'Montserrat';
+        font-size: 40px;
+        font-weight: 700;
+        em {
+          font-family: 'Noto Sans KR';
+          font-size: 38px;
+        }
+      }
+
+      .name {
+        margin-top: 36px;
+        font-size: 36px;
+        text-align: left;
+      }
+    }
+    .member-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      
+      .member {
+        width: 312px;
+        padding-bottom: 25px;
+        &:not(:nth-child(3n+1)) {
+          margin-left: 24px;
+        }
+        a {
+          @include block-a;
+          img {
+            width: 312px;
+            height: 416px;
+          }
+          .name {
+            margin-top: 15px;
+            font-size: 34px;
+            text-align: center;
           }
         }
       }
@@ -229,6 +364,12 @@ img {
   a {
     @include block-a;
     width: 83px;
+    border-radius: 100%;
+    img {
+      
+      border-radius: 99%;
+      background-color: #fff;
+    }
   }
 
   .expand-menu {
@@ -240,4 +381,25 @@ img {
   .top-btn {
     margin-top: 20px;
   }
+}
+
+// transition
+.gnb-enter-active,
+.gnb-leave-active {
+  transition: all .3s;
+}
+
+.gnb-enter,
+.gnb-leave-to {
+  opacity: 0;
+}
+
+.floating-enter-active,
+.floating-leave-active {
+  transition: opacity .3s;
+}
+
+.floating-enter,
+.floating-leave-to {
+  opacity: 0;
 }
