@@ -575,8 +575,8 @@ button.btn {
 }
 
 .main.facility .contents-wrapper {
-  height: 1000px;
   margin-top: 70px;
+  padding-bottom: 25px;
   border-radius: 100% 100% 0 0;
   background-color: #000;
 }
@@ -597,6 +597,65 @@ button.btn {
   font-family: 'Montserrat';
   font-size: 25px;
   font-weight: 600;
+}
+
+.main.facility .contents-wrapper article {
+  width: 1096px;
+  margin: 0 auto;
+}
+
+.main.facility .contents-wrapper .main-img {
+  position: relative;
+  margin-top: 56px;
+}
+
+.main.facility .contents-wrapper .main-img a {
+  position: absolute;
+  top: 50%;
+}
+
+.main.facility .contents-wrapper .main-img a.prev {
+  left: 16px;
+}
+
+.main.facility .contents-wrapper .main-img a.next {
+  right: 16px;
+}
+
+.main.facility .contents-wrapper .main-img a img {
+  width: 42px;
+}
+
+.main.facility .contents-wrapper .sub-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 42px;
+}
+
+.main.facility .contents-wrapper .sub-img a {
+  -ms-flex-preferred-size: calc((100% - 48px) / 3);
+      flex-basis: calc((100% - 48px) / 3);
+}
+
+.main.facility .contents-wrapper .sub-img a img {
+  display: block;
+}
+
+.main.facility .contents-wrapper .sub-img a:not(:nth-child(3n+1)) {
+  margin-left: 24px;
+}
+
+.main.facility .contents-wrapper .sub-img a:nth-child(n+4) {
+  margin-top: 24px;
+}
+
+.main.facility .contents-wrapper .logo {
+  display: block;
+  width: 200px;
+  margin: 172px auto 0;
 }
 
 #footer {

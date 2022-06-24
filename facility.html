@@ -55,12 +55,20 @@
               <p class="eng">FACILITY</p>
             </h4>
             <article class="main-img">
-              <img src="" alt="">
+              <img :src="imgArr[imgIndex]" alt="">
+              <a class="prev" href="javascript:void(0)" @click="prevBtn">
+                <img src="img/common/btn-prev.png" alt="">
+              </a>
+              <a class="next" href="javascript:void(0)" @click="nextBtn">
+                <img src="img/common/btn-next.png" alt="">
+              </a>
             </article>
             <article class="sub-img">
-
+              <a v-for="(item, i) in imgArr" :key="i" href="javascript:void(0)">
+                <img :src="imgArr[i]" alt="">
+              </a>
             </article>
-            <img src="" alt="">
+            <img class="logo" src="img/common/onmusic_logo_fff.png" alt="">
           </section>
         </main>
         <footer id="footer">

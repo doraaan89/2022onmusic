@@ -447,8 +447,8 @@ button {
 
 .main.facility {
   .contents-wrapper {
-    height: 1000px;
     margin-top: 70px;
+    padding-bottom: 25px;
     border-radius: 100% 100% 0 0;
     background-color: #000;
     .title {
@@ -465,6 +465,49 @@ button {
         font-size: 25px;
         font-weight: 600;
       }
+    }
+    article {
+      width: 1096px;
+      margin: 0 auto;
+    }
+    .main-img {
+      position: relative;
+      margin-top: 56px;
+      a {
+        position: absolute;
+        top: 50%;
+        &.prev {
+          left: 16px;
+        }
+        &.next {
+          right: 16px;
+        }
+        img {
+          width: 42px;
+        }
+      }
+    }
+    .sub-img {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 42px;
+      a {
+        flex-basis: calc((100% - 48px) / 3);
+        img {
+          display: block;
+        }
+        &:not(:nth-child(3n+1)) {
+          margin-left: 24px;
+        }
+        &:nth-child(n+4) {
+          margin-top: 24px;
+        }
+      }
+    }
+    .logo {
+      display: block;
+      width: 200px;
+      margin: 172px auto 0;
     }
   }
 }

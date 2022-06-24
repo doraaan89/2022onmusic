@@ -180,3 +180,42 @@ const trainer = new Vue({
 		}
 	}
 });
+
+const facility = new Vue({
+  el: '.main.facility',
+  data: {
+    imgIndex: 0,
+    imgArr: [
+      'temp/facility/시설사진/1.jpg',
+      'temp/facility/시설사진/2.jpg',
+      'temp/facility/시설사진/3.jpg',
+      'temp/facility/시설사진/4.jpg',
+      'temp/facility/시설사진/5.jpg',
+      'temp/facility/시설사진/6.jpg',
+      'temp/facility/시설사진/7.jpg',
+      'temp/facility/시설사진/8.jpg',
+      'temp/facility/시설사진/9.jpg',
+      'temp/facility/시설사진/10.jpg',
+      'temp/facility/시설사진/11.jpg',
+      'temp/facility/시설사진/12.jpg',
+    ]
+  },
+  methods: {
+    prevBtn() {
+      if (this.imgIndex < 1) {
+        this.imgIndex = 11;
+      } else if (this.imgIndex > 11) {
+        this.imgIndex = 0;
+      } else {
+        this.imgIndex--;
+      }
+    },
+    nextBtn() {
+      if (this.imgIndex > 10) {
+        this.imgIndex = 0;
+      } else {
+        this.imgIndex++;
+      }
+    }
+  }
+})
