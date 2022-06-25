@@ -53,13 +53,13 @@
             WE ARE THE BEST TEAM<br />FOR YOUR DREAM
             <img src="img/common/accordion-title-img.png" alt="">
           </h4>
-          <section id="vocal" class="trainer">
+          <section v-for="(item, i) in trainerArr" :key="i" :id="item.id" class="trainer">
             <h5 class="title">
-              VOCAL
+              {{ item.title }}
             </h5>
             <div class="member-container">
-              <div class="ceo">
-                <a href="">
+              <div v-if="item.ceo" class="ceo">
+                <a href="javascript:void(0)" @click="modalOpen('원장님')">
                   <img src="temp/profile/강사 사진/원장님.png" alt="">
                   <div class="text">
                     <p class="position">CEO <em>대표이사</em></p>
@@ -68,162 +68,28 @@
                 </a>
               </div>
               <ul class="member-wrap">
-                <li class="member">
-                  <a href="">
-                    <img src="temp/profile/강사 사진/김찬오T_2.jpg" alt="">
-                    <p class="name">김 찬 오</p>
-                  </a>
-                </li>
-                <li class="member">
-                  <a href="">
-                    <img src="temp/profile/강사 사진/정앙정T.bmp" alt="">
-                    <p class="name">정 앙 정</p>
-                  </a>
-                </li>
-                <li class="member">
-                  <a href="">
-                    <img src="temp/profile/강사 사진/최민정T.jpeg" alt="">
-                    <p class="name">최 민 정</p>
-                  </a>
-                </li>
-                <li class="member">
-                  <a href="">
-                    <img src="temp/profile/강사 사진/이하정T.jpg" alt="">
-                    <p class="name">이 하 정</p>
-                  </a>
-                </li>
-                <li class="member">
-                  <a href="">
-                    <img src="temp/profile/강사 사진/전승원.jpg" alt="">
-                    <p class="name">전 승 원</p>
-                  </a>
-                </li>
-                <li class="member">
-                  <a href="">
-                    <img src="temp/profile/강사 사진/고유진1.jpg" alt="">
-                    <p class="name">고 리 하</p>
+                <li v-for="(list, idx) in item.trainer" :key="idx" class="member">
+                  <a href="javascript:void(0)" @click="modalOpen(list.name)">
+                    <img :src="list.profileImg" alt="">
+                    <p class="name">{{ list.name }}</p>
                   </a>
                 </li>
               </ul>
             </div>
           </section>
-          <section id="dance" class="trainer">
-            <h5 class="title">
-              DANCE
-            </h5>
-            <div class="member-container">
-              <ul class="member-wrap">
-                <li class="member">
-                  <a href="">
-                    <img src="temp/profile/강사 사진/영진 프로필.jpg" alt="">
-                    <p class="name">김 영 진</p>
-                  </a>
-                </li>
-                <li class="member">
-                  <a href="">
-                    <img src="temp/profile/강사 사진/상민샘1.jpg" alt="">
-                    <p class="name">김 상 민</p>
-                  </a>
-                </li>
-                <li class="member">
-                  <a href="">
-                    <img src="temp/profile/강사 사진/고유진1.jpg" alt="">
-                    <p class="name">고 리 하</p>
-                  </a>
-                </li>
-                <li class="member">
-                  <a href="">
-                    <img src="temp/profile/강사 사진/이하정T.jpg" alt="">
-                    <p class="name">이 하 정</p>
-                  </a>
-                </li>
-                <li class="member">
-                  <a href="">
-                    <img src="temp/profile/강사 사진/소서현T.jpg" alt="">
-                    <p class="name">소 서 현</p>
-                  </a>
-                </li>
-              </ul>
+          <!-- profile modal container [S] -->
+          <div v-if="isModal" class="modal-container" @click.self="modalClose">
+            <div class="modal-wrapper">
+              <img :src="`temp/profile/강사 프로필/${modalName}.jpg`" alt="">
+              <a class="prev" href="javascript:void(0)" @click="prevBtn">
+                <img src="img/common/btn-prev.png" alt="">
+              </a>
+              <a class="next" href="javascript:void(0)" @click="nextBtn">
+                <img src="img/common/btn-next.png" alt="">
+              </a>
             </div>
-          </section>
-          <section id="midi" class="trainer">
-            <h5 class="title">
-              MIDI
-            </h5>
-            <div class="member-container">
-              <ul class="member-wrap">
-                <li class="member">
-                  <a href="">
-                    <img src="temp/profile/강사 사진/매트루스T.jpeg" alt="">
-                    <p class="name">매트루스</p>
-                  </a>
-                </li>
-                <li class="member">
-                  <a href="">
-                    <img src="temp/profile/강사 사진/김준형.jpg" alt="">
-                    <p class="name">김 준 형</p>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </section>
-          <section id="rap" class="trainer">
-            <h5 class="title">
-              RAP
-            </h5>
-            <div class="member-container">
-              <ul class="member-wrap">
-                <li class="member">
-                  <a href="">
-                    <img src="temp/profile/강사 사진/영진 프로필.jpg" alt="">
-                    <p class="name">김 영 진</p>
-                  </a>
-                </li>
-                <li class="member">
-                  <a href="">
-                    <img src="temp/profile/강사 사진/상민샘1.jpg" alt="">
-                    <p class="name">김 상 민</p>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </section>
-          <section id="piano" class="trainer">
-            <h5 class="title">
-              PIANO
-            </h5>
-            <div class="member-container">
-              <ul class="member-wrap">
-                <li class="member">
-                  <a href="">
-                    <img src="temp/profile/강사 사진/안소현T.jpg" alt="">
-                    <p class="name">안 소 현</p>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </section>
-          <section id="guitar" class="trainer">
-            <h5 class="title">
-              GUITAR
-            </h5>
-            <div class="member-container">
-              <ul class="member-wrap">
-                <li class="member">
-                  <a href="">
-                    <img src="temp/profile/강사 사진/민우t.jpg" alt="">
-                    <p class="name">지 민 우</p>
-                  </a>
-                </li>
-                <li class="member">
-                  <a href="">
-                    <img src="temp/profile/강사 사진/김준형.jpg" alt="">
-                    <p class="name">김 준 형</p>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </section>
+          </div>
+          <!-- profile modal container [E] -->
         </main>
         <footer id="footer">
           <div class="footer__upper">
@@ -285,6 +151,7 @@
       </div>
     </div>
 
+    
     <script src="js/script.js"></script>
   </body>
 </html>

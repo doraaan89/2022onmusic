@@ -415,6 +415,47 @@ button.btn {
   text-align: center;
 }
 
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.modal-container .modal-wrapper {
+  position: relative;
+  width: 70%;
+}
+
+.modal-container .modal-wrapper a {
+  position: absolute;
+  top: 50%;
+}
+
+.modal-container .modal-wrapper a img {
+  width: 40px;
+}
+
+.modal-container .modal-wrapper a.prev {
+  left: -64px;
+}
+
+.modal-container .modal-wrapper a.next {
+  right: -64px;
+}
+
 .about-content .about-us {
   max-width: 1320px;
   margin: 0 auto;
