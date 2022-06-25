@@ -13,6 +13,11 @@ img {
   width: 100%;
 }
 
+@mixin container {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
 @mixin block-a {
   display: block;
   text-decoration: none;
@@ -21,8 +26,7 @@ img {
 
 .container {
   .wrapper {
-    max-width: 1320px;
-    margin: 0 auto;
+    // @include container;
   }
 }
 
@@ -51,6 +55,7 @@ button {
 // header
 
 #header {
+  @include container;
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -129,6 +134,7 @@ button {
 }
 
 .main {
+  // @include container;
   margin-top: 10px;
   border-top: 1px solid #090103;
 }
@@ -238,6 +244,7 @@ button {
 }
 
 .trainer-content {
+  @include container;
   margin-top: 60px;
   .title {
     font-family: 'Montserrat';
@@ -322,6 +329,7 @@ button {
 
 .about-content {
   .about-us {
+    @include container;
     margin-top: 10px;
     padding: 20px 30px 0;
     border-top: 1px solid #090103;
@@ -350,19 +358,183 @@ button {
     }
   }
   .strategy {
-    position: relative;
-    padding: 30px;
-    .bg {
-      width: 1920px;
-
-      background-color: #000;
+    background-color: #000;
+    .wrap {
+      @include container;
+      padding-bottom: 100px;
+      .title {
+        padding-top: 52px;
+        @include eng;
+        font-size: 30px;
+        font-weight: 700;
+        color: #fff;
+      }
+      img {
+        display: block;
+        width: 1094px;
+        margin: 104px auto 0;
+      }
+      .txt-contents {
+        display: flex;
+        justify-content: space-between;
+        width: 1094px;
+        margin: 90px auto 0;
+        .item {
+          color: #fff;
+          .title {
+            font-size: 24px;
+            font-weight: bold;
+          }
+          .content {
+            margin-top: 24px;
+            font-size: 20px;
+            font-weight: 400;
+          }
+        }
+      }
     }
+  }
+  .symbol {
+    background-color: #c5ff00;
+    .symbol-list {
+      display: flex;
+      justify-content: space-between;
+      width: 1094px;
+      margin: 0 auto;
+      padding: 132px 0 96px;
+      li {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        p {
+          margin-top: 42px;
+          @include eng;
+          font-size: 25px;
+          font-weight: 700;
+          text-align: center;
+        }
+        &.creative {
+          img {
+            width: 233px;
+          }
+        }
+        &.dynamic {
+          img {
+            width: 196px;
+          }
+        }
+        &.new {
+          img {
+            margin-top: 32px;
+            width: 281px;
+          }
+        }
+      }
+    }
+  }
+  .keyword {
+    @include container;
+    .keyword-list {
+      display: flex;
+      flex-wrap: wrap;
+      .item {
+        flex-basis: calc((100% - 1px) / 2);
+        padding: 152px 0 110px;
+        text-align: center;
+        &:nth-child(2n) {
+          border-left: 1px solid #090103;
+        }
+        &:nth-child(n+3) {
+          border-top: 1px solid #090103;
+        }
+        .title {
+          @include eng;
+          font-size: 35px;
+          font-weight: 700;
+        }
+        .content {
+          margin-top: 42px;
+          font-size: 18px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+  .identity {
+    @include container;
+    border-top: 1px solid #090103;
     .title {
-      padding-top: 52px;
+      padding: 22px 30px;
       @include eng;
       font-size: 30px;
       font-weight: 700;
-      color: #fff;
+    }
+    .id-list {
+      display: flex;
+      padding: 26px 30px 0;
+      border-top: 1px solid #090103;
+      li {
+        flex-basis: 50%;
+        background-color: unset;
+        .title {
+          font-size: 20px;
+          font-weight: 400;
+        }
+        &.symbol {
+          img {
+            display: block;
+            width: 198px;
+            margin: 142px auto 157px;
+          }
+        }
+        &.wordmark {
+          img {
+            display: block;
+            width: 420px;
+            margin: 216px auto 0;
+
+          }
+        }
+      }
+    }
+  }
+  .color {
+    @include container;
+    @include eng;
+    border-top: 1px solid #090103;
+    h5.title {
+      margin-top: 16px;
+      padding: 0 30px;
+      font-size: 20px;
+      font-weight: 500;
+    }
+    .content {
+      height: 120px;
+      margin-top: 16px;
+      h6.title {
+        padding: 25px 30px;
+      }
+      &.column {
+        display: flex;
+        > div {
+          flex-basis: 50%;
+          border: 1px solid #090103;
+          &.white {
+            background-color: #fff;
+          }
+          &.black {
+            background-color: #000;
+            .title {
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+    .brand {
+      .content {
+        background-color: #c5ff00;
+      }
     }
   }
 }
@@ -446,6 +618,7 @@ button {
 }
 
 .main.facility {
+  @include container;
   .contents-wrapper {
     margin-top: 70px;
     padding-bottom: 25px;
@@ -513,6 +686,7 @@ button {
 }
 
 #footer {
+  @include container;
   margin-top: 150px;
   .footer__upper {
     padding-bottom: 16px;
