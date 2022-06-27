@@ -4,11 +4,11 @@ const gnb = new Vue({
     gnbArr: [
       {
         title: 'ABOUT',
-        url: 'about.html',
+        url: 'javascript:void(0)',
         depth2: [
           {
             title: '온뮤직 소개',
-            url: 'javascript:void(0)',
+            url: 'about.html',
           },
           {
             title: '오시는 길',
@@ -16,7 +16,7 @@ const gnb = new Vue({
           },
           {
             title: '시설 안내',
-            url: 'javascript:void(0)',
+            url: 'facility.html',
           },
         ]
       },
