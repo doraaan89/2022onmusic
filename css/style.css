@@ -44,7 +44,7 @@ blockquote, q {
 
 blockquote:before, blockquote:after,
 q:before, q:after {
-  content: '';
+  content: "";
   content: none;
 }
 
@@ -55,7 +55,7 @@ table {
 
 /* common */
 body {
-  font-family: 'Noto Sans KR';
+  font-family: "Noto Sans KR";
 }
 
 img {
@@ -69,9 +69,8 @@ button {
   border: 0;
   outline: 0;
   background-color: #fff;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
 }
-
 button.btn {
   padding: 14px 20px;
   border-radius: 20px;
@@ -87,57 +86,37 @@ button.btn {
   max-width: 1320px;
   margin: 0 auto;
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   margin-top: 125px;
 }
-
 #header a {
   display: block;
   text-decoration: none;
   color: #111;
 }
-
 #header .logo {
   width: 120px;
   padding: 0 22px;
 }
-
 #header .header__right {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
   font-size: 22px;
   color: #606060;
 }
-
 #header .header__right .language {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   text-align: right;
 }
-
 #header .header__right .language a {
   display: inline;
 }
-
 #header .header__right .member {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-top: 16px;
 }
-
 #header .header__right .member .divider {
   margin: 0 4px;
 }
@@ -147,28 +126,20 @@ button.btn {
   margin-top: 16px;
   border-top: 1px solid #090103;
 }
-
 #gnb .depth1 {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
 }
-
 #gnb .depth1 > li {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 20%;
-          flex: 1 0 20%;
+  flex: 1 0 20%;
 }
-
 #gnb .depth1 > li > a {
   padding: 38px 0;
   font-size: 30px;
   font-weight: 700;
 }
-
 #gnb .depth1 .depth2-bg {
   position: absolute;
   top: 106px;
@@ -178,13 +149,11 @@ button.btn {
   height: 288px;
   background-color: rgba(0, 0, 0, 0.5);
 }
-
 #gnb .depth2 {
   position: absolute;
-  width: calc(100% / 5);
-  font-family: 'Noto Sans KR';
+  width: 20%;
+  font-family: "Noto Sans KR";
 }
-
 #gnb .depth2 > li > a {
   display: block;
   text-decoration: none;
@@ -202,24 +171,20 @@ button.btn {
 .main-content .accordion-area {
   margin-top: 52px;
 }
-
 .main-content .accordion-area .title--img img {
   width: 52px;
 }
-
 .main-content .accordion-area .title--content {
   margin-top: 32px;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-size: 40px;
   font-weight: 600;
 }
-
 .main-content .accordion-area .contents {
   margin-top: 58px;
   border-top: 18px solid #111;
   border-bottom: 18px solid #111;
 }
-
 .main-content .accordion-area .contents details summary {
   position: relative;
   border: 1px solid #111;
@@ -227,18 +192,16 @@ button.btn {
   border-right: 0;
   padding: 42px 90px;
   list-style: none;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-size: 33px;
   color: #111;
 }
-
 .main-content .accordion-area .contents details summary::-webkit-details-marker {
   font-size: 0;
   display: none;
 }
-
 .main-content .accordion-area .contents details[open] summary::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -246,61 +209,45 @@ button.btn {
   height: 100%;
   background-color: #c5ff00;
 }
-
 .main-content .accordion-area .contents details.intro .content .intro-area {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-top: 28px;
   padding-bottom: 75px;
 }
-
 .main-content .accordion-area .contents details.intro .content .intro-area img {
   width: 200px;
   margin-left: 271px;
 }
-
 .main-content .accordion-area .contents details.intro .content .intro-area .text-area {
   margin-left: 313px;
 }
-
 .main-content .accordion-area .contents details.intro .content .intro-area .text-area .title {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-size: 28px;
   font-weight: 700;
   letter-spacing: 0.7px;
 }
-
 .main-content .accordion-area .contents details.intro .content .intro-area .text-area .summary {
   margin-top: 38px;
 }
-
 .main-content .accordion-area .contents details .content {
   padding: 24px 0;
 }
-
 .main-content .accordion-area .contents details .content .btn-wrap {
   padding: 0 22px;
   text-align: right;
 }
-
 .main-content .accordion-area .contents details .content.empty {
   height: 300px;
   background-color: #ddd;
 }
-
 .main-content .accordion-area .contents details .content .img-area {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-top: 24px;
 }
-
 .main-content .accordion-area .contents details .content .img-area a {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
+  flex-basis: 50%;
 }
-
 .main-content .accordion-area .contents details .content .img-area a + a {
   margin-left: 24px;
 }
@@ -310,105 +257,79 @@ button.btn {
   margin: 0 auto;
   margin-top: 60px;
 }
-
 .trainer-content .title {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-size: 42px;
   line-height: 1.43;
 }
-
 .trainer-content .title img {
   width: 40px;
   margin-left: 8px;
   vertical-align: middle;
 }
-
 .trainer-content .trainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-top: 80px;
 }
-
 .trainer-content .trainer h5.title {
   width: 200px;
   border-top: 13px solid #111;
   padding-top: 40px;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-size: 52px;
   font-weight: 700;
 }
-
 .trainer-content .trainer .member-container {
   margin-left: 136px;
 }
-
 .trainer-content .trainer .ceo {
   margin-bottom: 95px;
 }
-
 .trainer-content .trainer .ceo img {
   width: 312px;
   height: 416px;
 }
-
 .trainer-content .trainer .ceo > a {
   display: block;
   text-decoration: none;
   color: #111;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  align-items: flex-end;
 }
-
 .trainer-content .trainer .ceo .text .position {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-size: 40px;
   font-weight: 700;
 }
-
 .trainer-content .trainer .ceo .text .position em {
-  font-family: 'Noto Sans KR';
+  font-family: "Noto Sans KR";
   font-size: 38px;
 }
-
 .trainer-content .trainer .ceo .text .name {
   margin-top: 36px;
   font-size: 36px;
   text-align: left;
 }
-
 .trainer-content .trainer .member-wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
-
 .trainer-content .trainer .member-wrap .member {
   width: 312px;
   padding-bottom: 25px;
 }
-
-.trainer-content .trainer .member-wrap .member:not(:nth-child(3n + 1)) {
+.trainer-content .trainer .member-wrap .member:not(:nth-child(3n+1)) {
   margin-left: 24px;
 }
-
 .trainer-content .trainer .member-wrap .member a {
   display: block;
   text-decoration: none;
   color: #111;
 }
-
 .trainer-content .trainer .member-wrap .member a img {
   width: 312px;
   height: 416px;
 }
-
 .trainer-content .trainer .member-wrap .member a .name {
   margin-top: 15px;
   font-size: 34px;
@@ -420,38 +341,27 @@ button.btn {
   top: 0;
   left: 0;
   z-index: 99;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.3);
 }
-
 .modal-container .modal-wrapper {
   position: relative;
   width: 70%;
 }
-
 .modal-container .modal-wrapper a {
   position: absolute;
   top: 50%;
 }
-
 .modal-container .modal-wrapper a img {
   width: 40px;
 }
-
 .modal-container .modal-wrapper a.prev {
   left: -64px;
 }
-
 .modal-container .modal-wrapper a.next {
   right: -64px;
 }
@@ -463,371 +373,272 @@ button.btn {
   padding: 20px 30px 0;
   border-top: 1px solid #090103;
 }
-
 .about-content .about-us .title {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-size: 30px;
   font-weight: 700;
 }
-
 .about-content .about-us .title img {
   width: 25px;
 }
-
 .about-content .about-us .contents .title {
   margin-top: 240px;
   font-size: 50px;
 }
-
 .about-content .about-us .contents .content {
   margin-top: 65px;
   font-size: 20px;
 }
-
 .about-content .about-us .contents img {
   display: block;
   margin: 132px auto 97px;
   width: 1094px;
 }
-
 .about-content .strategy {
   background-color: #000;
 }
-
 .about-content .strategy .wrap {
   max-width: 1320px;
   margin: 0 auto;
   padding-bottom: 100px;
 }
-
 .about-content .strategy .wrap .title {
   padding-top: 52px;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-size: 30px;
   font-weight: 700;
   color: #fff;
 }
-
 .about-content .strategy .wrap img {
   display: block;
   width: 1094px;
   margin: 104px auto 0;
 }
-
 .about-content .strategy .wrap .txt-contents {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   width: 1094px;
   margin: 90px auto 0;
 }
-
 .about-content .strategy .wrap .txt-contents .item {
   color: #fff;
 }
-
 .about-content .strategy .wrap .txt-contents .item .title {
   font-size: 24px;
   font-weight: bold;
 }
-
 .about-content .strategy .wrap .txt-contents .item .content {
   margin-top: 24px;
   font-size: 20px;
   font-weight: 400;
 }
-
 .about-content .symbol {
   background-color: #c5ff00;
 }
-
 .about-content .symbol .symbol-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   width: 1094px;
   margin: 0 auto;
   padding: 132px 0 96px;
 }
-
 .about-content .symbol .symbol-list li {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-between;
 }
-
 .about-content .symbol .symbol-list li p {
   margin-top: 42px;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-size: 25px;
   font-weight: 700;
   text-align: center;
 }
-
 .about-content .symbol .symbol-list li.creative img {
   width: 233px;
 }
-
 .about-content .symbol .symbol-list li.dynamic img {
   width: 196px;
 }
-
 .about-content .symbol .symbol-list li.new img {
   margin-top: 32px;
   width: 281px;
 }
-
 .about-content .keyword {
   max-width: 1320px;
   margin: 0 auto;
 }
-
 .about-content .keyword .keyword-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
-
 .about-content .keyword .keyword-list .item {
-  -ms-flex-preferred-size: calc((100% - 1px) / 2);
-      flex-basis: calc((100% - 1px) / 2);
+  flex-basis: calc((100% - 1px) / 2);
   padding: 152px 0 110px;
   text-align: center;
 }
-
 .about-content .keyword .keyword-list .item:nth-child(2n) {
   border-left: 1px solid #090103;
 }
-
 .about-content .keyword .keyword-list .item:nth-child(n+3) {
   border-top: 1px solid #090103;
 }
-
 .about-content .keyword .keyword-list .item .title {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-size: 35px;
   font-weight: 700;
 }
-
 .about-content .keyword .keyword-list .item .content {
   margin-top: 42px;
   font-size: 18px;
   font-weight: 400;
 }
-
 .about-content .identity {
   max-width: 1320px;
   margin: 0 auto;
   border-top: 1px solid #090103;
 }
-
 .about-content .identity .title {
   padding: 22px 30px;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-size: 30px;
   font-weight: 700;
 }
-
 .about-content .identity .id-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   padding: 26px 30px 0;
   border-top: 1px solid #090103;
 }
-
 .about-content .identity .id-list li {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
+  flex-basis: 50%;
   background-color: unset;
 }
-
 .about-content .identity .id-list li .title {
   font-size: 20px;
   font-weight: 400;
 }
-
 .about-content .identity .id-list li.symbol img {
   display: block;
   width: 198px;
   margin: 142px auto 157px;
 }
-
 .about-content .identity .id-list li.wordmark img {
   display: block;
   width: 420px;
   margin: 216px auto 0;
 }
-
 .about-content .color {
   max-width: 1320px;
   margin: 0 auto;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   border-top: 1px solid #090103;
 }
-
 .about-content .color h5.title {
   margin-top: 16px;
   padding: 0 30px;
   font-size: 20px;
   font-weight: 500;
 }
-
 .about-content .color .content {
   height: 120px;
   margin-top: 16px;
 }
-
 .about-content .color .content h6.title {
   padding: 25px 30px;
 }
-
 .about-content .color .content.column {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .about-content .color .content.column > div {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
+  flex-basis: 50%;
   border: 1px solid #090103;
 }
-
 .about-content .color .content.column > div.white {
   background-color: #fff;
 }
-
 .about-content .color .content.column > div.black {
   background-color: #000;
 }
-
 .about-content .color .content.column > div.black .title {
   color: #fff;
 }
-
 .about-content .color .brand .content {
   background-color: #c5ff00;
 }
 
 .main.contact .title {
   margin-top: 120px;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-size: 50px;
   font-weight: 700;
 }
-
 .main.contact .title img {
   width: 40px;
 }
-
 .main.contact .summary {
   margin-top: 38px;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-size: 20px;
 }
-
 .main.contact .contents {
   margin-top: 38px;
   border-top: 10px solid #090103;
   border-bottom: 10px solid #090103;
 }
-
 .main.contact .contents .table {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   margin-top: 10px;
   margin-bottom: 10px;
 }
-
 .main.contact .contents .table .item {
   border-top: 2px solid #000;
   padding: 20px 0;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 49%;
-          flex: 1 1 49%;
+  flex: 1 1 49%;
 }
-
 .main.contact .contents .table .item:nth-child(2n) {
   border-left: 2px solid #000;
   padding-left: 20px;
 }
-
-.main.contact .contents .table .item:nth-child(n + 7) {
+.main.contact .contents .table .item:nth-child(n+7) {
   border-bottom: 2px solid #000;
 }
-
 .main.contact .contents .table .item .contact-img {
   width: 174px;
 }
-
 .main.contact .contents .table .item .sns-img {
   width: 112px;
 }
-
 .main.contact .contents .table .item a {
   display: block;
   text-decoration: none;
   color: #111;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
 .main.contact .contents .table .item a img {
   width: 88px;
 }
-
 .main.contact .contents .table .item a .txt-area {
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
+  flex-basis: 100%;
   text-align: center;
 }
-
 .main.contact .contents .table .item a .txt-area .title-main {
   font-size: 28px;
   font-weight: bold;
 }
-
 .main.contact .contents .table .item a .txt-area .title-sub {
   margin-top: 12px;
   font-size: 16px;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-weight: 700;
 }
-
 .main.contact .contents .table .item.sns {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .main.contact .contents .table .item.sns a {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
+  flex-basis: 50%;
 }
-
 .main.contact .contents .table .item.sns a .txt-area {
   margin-left: 24px;
   text-align: left;
@@ -837,89 +648,82 @@ button.btn {
   max-width: 1320px;
   margin: 0 auto;
 }
-
 .main.facility .contents-wrapper {
   margin-top: 70px;
   padding-bottom: 25px;
   border-radius: 100% 100% 0 0;
   background-color: #000;
 }
-
 .main.facility .contents-wrapper .title {
   padding-top: 50px;
   color: #c5ff00;
   text-align: center;
 }
-
 .main.facility .contents-wrapper .title .kor {
   font-size: 30px;
   font-weight: 700;
 }
-
 .main.facility .contents-wrapper .title .eng {
   margin-top: 24px;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-size: 25px;
   font-weight: 600;
 }
-
 .main.facility .contents-wrapper article {
   width: 1096px;
   margin: 0 auto;
 }
-
 .main.facility .contents-wrapper .main-img {
   position: relative;
   margin-top: 56px;
 }
-
 .main.facility .contents-wrapper .main-img a {
   position: absolute;
   top: 50%;
 }
-
 .main.facility .contents-wrapper .main-img a.prev {
   left: 16px;
 }
-
 .main.facility .contents-wrapper .main-img a.next {
   right: 16px;
 }
-
 .main.facility .contents-wrapper .main-img a img {
   width: 42px;
 }
-
 .main.facility .contents-wrapper .sub-img {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   margin-top: 42px;
 }
-
 .main.facility .contents-wrapper .sub-img a {
-  -ms-flex-preferred-size: calc((100% - 48px) / 3);
-      flex-basis: calc((100% - 48px) / 3);
+  flex-basis: calc((100% - 48px) / 3);
 }
-
 .main.facility .contents-wrapper .sub-img a img {
   display: block;
 }
-
 .main.facility .contents-wrapper .sub-img a:not(:nth-child(3n+1)) {
   margin-left: 24px;
 }
-
 .main.facility .contents-wrapper .sub-img a:nth-child(n+4) {
   margin-top: 24px;
 }
-
 .main.facility .contents-wrapper .logo {
   display: block;
   width: 200px;
   margin: 172px auto 0;
+}
+
+.main.class .introduce h4.title {
+  margin-top: 24px;
+  padding: 30px;
+  font-family: "Montserrat";
+  font-size: 30px;
+  font-weight: 700;
+}
+.main.class .introduce h4.title img {
+  display: inline-block;
+  width: 24px;
+  margin-right: 34px;
 }
 
 #footer {
@@ -927,66 +731,45 @@ button.btn {
   margin: 0 auto;
   margin-top: 150px;
 }
-
 #footer .footer__upper {
   padding-bottom: 16px;
   border-bottom: 2px solid #090103;
 }
-
 #footer .footer__upper .sns {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
 }
-
 #footer .footer__upper .sns .sns__item:not(:first-child) {
   margin-left: 30px;
 }
-
 #footer .footer__upper .sns .sns__item > a {
   display: block;
   text-decoration: none;
   color: #111;
   font-size: 24px;
 }
-
 #footer .footer__lower {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   margin-top: 52px;
 }
-
 #footer .footer__lower .logo {
   width: 315px;
 }
-
 #footer .footer__lower .operating-time {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 #footer .footer__lower .operating-time .title {
   font-size: 22px;
   font-weight: 700;
   letter-spacing: 1.1px;
 }
-
 #footer .footer__lower .operating-time .time {
   margin-left: 30px;
 }
-
 #footer .footer__lower .operating-time .time li {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 #footer .footer__lower .operating-time .time li:last-child {
   margin-top: 8px;
 }
@@ -996,7 +779,6 @@ button.btn {
   top: 330px;
   right: 67px;
 }
-
 .floating-area a {
   display: block;
   text-decoration: none;
@@ -1004,23 +786,19 @@ button.btn {
   width: 83px;
   border-radius: 100%;
 }
-
 .floating-area a img {
   border-radius: 99%;
   background-color: #fff;
 }
-
 .floating-area .expand-menu li {
   margin-top: 20px;
 }
-
 .floating-area .top-btn {
   margin-top: 20px;
 }
 
 .gnb-enter-active,
 .gnb-leave-active {
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
@@ -1031,7 +809,6 @@ button.btn {
 
 .floating-enter-active,
 .floating-leave-active {
-  -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
 }
 

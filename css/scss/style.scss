@@ -717,6 +717,23 @@ button {
   }
 }
 
+.main.class {
+  .introduce {
+    h4.title {
+      margin-top: 24px;
+      padding: 30px;
+      @include eng;
+      font-size: 30px;
+      font-weight: 700;
+      img {
+        display: inline-block;
+        width: 24px;
+        margin-right: 34px;
+      }
+    }
+  }
+}
+
 #footer {
   @include container;
   margin-top: 150px;
