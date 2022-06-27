@@ -713,9 +713,16 @@ button.btn {
   margin: 172px auto 0;
 }
 
+.main.class {
+  border: none;
+}
 .main.class .introduce h4.title {
-  margin-top: 24px;
-  padding: 30px;
+  margin-top: 10px;
+  border-top: 1px solid #090103;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 24px 30px 0;
+  box-sizing: border-box;
   font-family: "Montserrat";
   font-size: 30px;
   font-weight: 700;
@@ -724,6 +731,20 @@ button.btn {
   display: inline-block;
   width: 24px;
   margin-right: 34px;
+}
+.main.class .introduce > img {
+  margin-top: 24px;
+}
+.main.class .btn-wrap {
+  display: flex;
+  max-width: 1320px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+.main.class .btn-wrap .item a {
+  display: block;
+  text-decoration: none;
+  color: #111;
 }
 
 #footer {
