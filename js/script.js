@@ -298,8 +298,9 @@ const trainer = new Vue({
       this.modalIndex = this.nameArr.indexOf(txt.split(' ').join(''));
       this.modalName = this.nameArr[this.modalIndex];
       this.isModal = true;
-
-      this.$refs.modalWrapper.focus();
+      this.$nextTick(() => {
+        this.$refs.modalWrapper.focus();
+      })
     },
     modalClose() {
       this.isModal = false;
