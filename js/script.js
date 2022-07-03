@@ -276,23 +276,51 @@ const trainer = new Vue({
 					]
 				},
 			],
+      nameArr: [],
+      modalIndex: 0,
       modalName: '',
       isModal: false,
 		}
 	},
+  mounted() {
+    this.trainerArr.forEach((_class) => {
+      _class.trainer.forEach((trainer) => {
+        const name = trainer.name.split(' ').join('');
+
+        this.nameArr.push(name)
+      })
+    });
+    this.nameArr.unshift('원장님');
+
+  },
   methods: {
     modalOpen(txt) {
-      this.modalName = txt.split(' ').join('');
+      this.modalIndex = this.nameArr.indexOf(txt.split(' ').join(''));
+      this.modalName = this.nameArr[this.modalIndex];
       this.isModal = true;
+
+      this.$refs.modalWrapper.focus();
     },
     modalClose() {
       this.isModal = false;
     },
     prevBtn() {
-
+      this.modalIndex--;
+      if (this.modalIndex < 0) {
+        this.modalName = this.nameArr[this.nameArr.length - 1];
+        this.modalIndex = this.nameArr.length - 1;
+        console.log(this.modalIndex)
+      } else {
+        this.modalName = this.nameArr[this.modalIndex];
+      }
     },
     nextBtn() {
-
+      this.modalIndex++;
+      if (this.modalIndex > 18) {
+        this.modalIndex = 0;
+        this.modalName = this.nameArr[this.modalIndex];
+      }
+      this.modalName = this.nameArr[this.modalIndex];
     },
   }
 });

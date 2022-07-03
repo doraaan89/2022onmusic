@@ -79,7 +79,7 @@
           </section>
           <!-- profile modal container [S] -->
           <div v-if="isModal" class="modal-container" @click.self="modalClose">
-            <div class="modal-wrapper">
+            <div ref="modalWrapper" class="modal-wrapper">
               <img :src="`temp/profile/강사 프로필/${modalName}.jpg`" alt="">
               <a class="prev" href="javascript:void(0)" @click="prevBtn">
                 <img src="img/common/btn-prev.png" alt="">
