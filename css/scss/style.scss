@@ -776,13 +776,43 @@ button {
         width: 24px;
         margin-right: 34px;
       }
+      .sub-title {
+        margin-top: 20px;
+        margin-left: 60px;
+        font-size: 20px;
+
+      }
     }
-    .bg-img {
-      margin-top: 24px;
-      background-color: #000;
-      text-align: center;
-      img {
-        width: 1320px;
+    .table {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      margin-top: 22px;
+      .item {
+        width: calc((100% - 172px) / 3);
+        border: 1px solid #090103;
+        padding: 24px 28px;
+        text-align: right;
+        &:not(:nth-child(3n+1)) {
+          border-left: none;
+        }
+        &:nth-child(n+4) {
+          border-top: none;
+        }
+        .symbol {
+          @include eng;
+          font-size: 22px;
+        }
+        .title {
+          margin-top: 22px;
+          font-size: 30px;
+          font-weight: 700;
+          line-height: 1.32;
+        }
+        .content {
+          margin-top: 90px;
+          line-height: 1.3;
+        }
       }
     }
   }
